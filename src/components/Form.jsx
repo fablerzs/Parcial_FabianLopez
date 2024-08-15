@@ -68,11 +68,13 @@ const Form = () => {
         <label>Alimento favorito:</label>
             <input type="text"  value={persona.alimento} onChange={handleChangeEdad}/>
         
-        <Button onClick={send}>Enviar</Button>
+        <button type='submit'>Enviar</button>
         <Button onClick={reset}>Resetear</Button>
 
 
     </form>
+
+    {show ? (<Card persona={persona}/>) : (<Message/>)}
 
     
     </>
